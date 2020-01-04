@@ -1,0 +1,327 @@
+#__jc_chat__ {
+	margin: 0; padding: 0;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 1500;
+}
+#__jc_chat__ .frame_jc_chat {
+	border: 0px solid;
+	border-radius: 5px;
+	position: absolute;
+	right: 0;
+	bottom: 60px;
+	width: 350px;
+	height: 450px;
+	box-shadow: 0 0 15px rgba(100,100,100,.5); 
+	background: #fff;
+	box-sizing: border-box;
+	overflow: hidden;
+	display: none;
+}
+
+#__jc_chat__ .frame_jc_chat_show {
+	display: block;
+}
+
+#__jc_chat__ .frame_jc_chat .header_chat {
+	margin: 0; padding: 10px;
+	background: #1B7BD8;
+	color: #fff;
+}
+#__jc_chat__ .frame_jc_chat .body_chat {
+	margin: 0; padding: 10px;
+	background: #fff;
+	color: #606060;
+}
+#__jc_chat__ .frame_jc_chat .footer_chat {
+	margin: 0; padding: 10px;
+	background: #eee;
+	color: #606060;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	height: 50px;
+}
+#__jc_chat__ .frame_jc_chat .on_ready_chat {
+
+}
+#__jc_chat__ .frame_jc_chat .on_start_chat .header_chat {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 75px;
+	box-shadow: 0 0 5px rgba(0,0,0,.3);
+	z-index: 1;
+}
+
+#__jc_chat__ .frame_jc_chat .on_hide_chat {
+	display: none;
+}
+
+
+#__jc_chat__ .button_menu_chat {
+	position: absolute;
+	bottom: 0; right: 0;
+}
+#__jc_chat__ .button_menu_chat button {
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+}
+#__jc_chat__ .button_menu_chat button i {
+	font-size: 20px;
+}
+
+#__jc_chat__ .frame-chat {
+	background: #f9f9f9f9;
+	color: #404040;
+	border: 0px solid;
+	padding: 10px;
+	overflow: auto;
+	position: absolute;
+	top: 75px;
+	right: 0;
+	left: 0;
+	bottom: 50px;
+}
+#__jc_chat__ .input-group {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 50px;
+}
+#__jc_chat__ .input-group .opt-chat {
+	margin: 0; padding: 0 10px;
+	height: 50px;
+	cursor: pointer;
+	font-size: 14px;
+}
+#__jc_chat__ .input-group .opt-chat i {
+	line-height: 50px;
+}
+
+#__jc_chat__ .input-group .opt-chat:hover i {
+	color: #1B7BD8;
+}
+
+#__jc_chat__ .input-control {
+	background: #fff;
+	overflow: auto;
+	border-radius: 0px;
+}
+
+#__jc_chat__ .frame-chat .chat-user {
+	margin: 0;
+	padding: 5px;
+	background: #1B7BD8 !important;
+	border: 0px #1884EE solid !important;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	margin-left: 15% !important;
+}
+#__jc_chat__ .frame-chat .chat-user * {
+	color: #fff !important;
+}
+
+#__jc_chat__ .frame-chat .chat-list {
+	margin: 0;
+	padding: 8px;
+	border: 1px #fff solid;
+	background: #fff;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	width: 85%;
+	margin-left: 0%;
+	font-size: 13px;
+	box-shadow: 1px 1px 3px rgba(56, 56, 56, 0.3);
+}
+#__jc_chat__ .frame-chat .on-write {
+	margin: 0; padding: 6px;
+	background: #fff;
+	font-size: 13px;
+	box-shadow: 1px 1px 3px rgba(56, 56, 56, 0.3);
+	width: fit-content;
+	border: 1px #fff solid;
+	border-radius: 5px;
+	display: flex;
+}
+
+#__jc_chat__ .frame-chat .on-write .anim-writer {
+	display: flex;
+}
+#__jc_chat__ .frame-chat .on-write .anim-writer span {
+	margin: 0; padding: 0;
+	margin-left: 5px;
+	margin-top: 6px;
+	width: 6px;
+	height: 6px;
+	background: #555;
+	border: 0px solid;
+	border-radius: 50%;
+}
+
+#__jc_chat__ .frame-chat .on-write .anim-writer span:nth-child(1) {
+	animation-delay: .0s;
+	animation-name: onwriter;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	animation-duration: .5s;
+	animation-timing-function: ease-in-out;
+}
+
+#__jc_chat__ .frame-chat .on-write .anim-writer span:nth-child(2) {
+	animation-delay: .10s;
+	animation-name: onwriter;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	animation-duration: .5s;
+	animation-timing-function: ease-in-out;
+}
+
+#__jc_chat__ .frame-chat .on-write .anim-writer span:nth-child(3) {
+	animation-delay: .20s;
+	animation-name: onwriter;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	animation-duration: .5s;
+	animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes onwriter {
+	from {
+		background-color: #777;
+		transform: scale(1);
+		margin-top: 8px;
+	}
+	to {
+		background-color: #555;
+		transform: scale(1.05);
+		margin-top: 4px;
+	}
+}
+
+@keyframes onwriter {
+	from {
+		background-color: #777;
+		transform: scale(1);
+		margin-top: 8px;
+	}
+	to {
+		background-color: #555;
+		transform: scale(1.05);
+		margin-top: 4px;
+	}
+}
+
+#__jc_chat__ .frame-chat .text-ico {
+	width: 20px;
+	height: 20px;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	line-height: 35px;
+	position: relative;
+	top: 3px;
+}
+
+#__jc_chat__ .frame-chat .date-chat {
+	margin: 0; padding: 10px;
+	font-size: 14px;
+	width: 100%;
+	margin-bottom: 10px;
+	text-align: center;
+}
+#__jc_chat__ .frame-chat .date-chat span {
+	margin: 0; padding: 5px 10px;
+	font-size: 13px;
+	background: #a8f7ff;
+	color: #606060;
+	border: 0px solid;
+	border-radius: 5px;
+}
+
+#__jc_chat__ .frame-emoji .btn {
+	border-radius: 0px;
+}
+
+#__jc_chat__ .frame-emoji .emoji {
+	color: #FFA800;
+	padding: 0px;
+	margin: 2px;
+	cursor: pointer;
+	width: 25px;
+	height: 25px;
+	background-position: center;
+	background-size: contain;
+	display: inline-block;
+}
+#__jc_chat__ #chat-text {
+	display: inline-block;
+	flex-flow: wrap;
+	line-height: 25px;
+}
+/*remove scrollbar width */
+#__jc_chat__ *::-webkit-scrollbar {
+	width: 2px;
+}
+#__jc_chat__ *::-webkit-scrollbar-track {
+	background: transparent;
+}
+#__jc_chat__ *::-webkit-scrollbar-thumb {
+	background: #aaa;
+}
+#__jc_chat__ *::-webkit-scrollbar-thumb:hover {
+	background: #aaa;
+}
+
+#__jc_chat__ #chat-text * {
+	line-height: 25px;
+}
+#__jc_chat__ #chat-text .emoji {
+	color: #FFA800;
+	padding: 0px;
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	background-position: center;
+	background-size: contain;
+	display: inline-block;
+}
+
+#__jc_chat__ #chat-text .text-ico {
+	width: 20px;
+	height: 20px;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	line-height: 35px;
+	position: relative;
+	top: 3px;
+}
+
+#__jc_chat__ .pack-lampiran .dropdown-menu {
+	padding: 5px;
+	width: 300px;
+	text-align: center;
+}
+
+#__jc_chat__ .frame-emoji {
+	margin: 0; padding: 0px;
+	background: #fff;
+	height: 0px;
+	position: absolute;
+	bottom: 50px;
+	left: 0;
+	right: 0;
+	transition: height .3s;
+	box-shadow: 0px -2px 5px rgba(169, 169, 169, 0.3);
+	overflow-y: auto;
+}
+
+#__jc_chat__ .frame-emoji-show {
+	height: 150px;
+}
